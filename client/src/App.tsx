@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Button } from "./components/ui/button";
-import NewProject from "./pages/NewProject";
-import Projects from "./pages/Projects";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -25,21 +25,16 @@ function App() {
             </ul>
           </nav>
         </header>
-        // Main content
         <main className="flex-grow flex items-center justify-center">
-          
           <Routes>
-          <Route path="/new-project" element={<NewProject />} />
-          <Route path="/projects" element={<Projects />} />
-
-          <Route path="/about" element={<div>About</div>} />
-        </Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
         </main>
         // Footer
         <footer className="w-full p-4 bg-black">
-          <p className="text-center text-white">© 2023 My App</p>
+          <p className="text-center text-white">Footer</p>
         </footer>
-      
       </div>
     </BrowserRouter>
   );
